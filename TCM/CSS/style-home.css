@@ -1,0 +1,201 @@
+/* Documento CSS das páginas Home (pt -en) */
+
+/* Formatação Geral da tag <body> para corpo do texto do site einteiro */
+
+body {
+    margin: 0; /* Sem margens */
+    padding: 0;/* Sem espaçamentos */
+    border: 0; /* Sem bordas */
+    background-color: #ffffff; /* Cor de fundo */
+    color: #666666; /* Cor de texto */
+    font-family: "Source Sans Pro", sans-serif; /* Fonte do texto títular e fonte reserva */
+    font-size: 150%; /* Tamanho de fonte */
+    font-weight: 200; /* Espessura de texto */
+    line-height: 1.65em; /* Espaçamento de texto */
+}
+
+
+/* Estilos do menu */
+
+/* Barra de navegação, fundo do menu */
+#cabecalho {
+    background-color: #000000; /* Cor de fundo em hexadecimal */
+    width: 100%; /* Largura 100% do tamanho da tela */
+    margin: 0 auto; /* Margem igual a 0 acima e abaixo e automático na horizontal para alinhar o elemento ao centro */ 
+    padding-top: 3px; /* acima da tag nav */
+    padding-bottom: 45px;  /* abaixo da tag nav */  
+    z-index: 1000; /* Posição relativa ao eixo Z, para ficar na frente de todos os elementos */
+}
+
+nav a {
+    margin-right: 25px; /* Margem de 25 pixel a direita de todos os elementos com a tag <a>*/
+    color: #f1f1f1; /* Cor do texto em hexadecimal */
+    font-weight: 600; /* Espessura do texto */
+    text-align: center;
+}
+
+#idiomas {
+    position: relative;
+    float: right; 
+}
+
+.menu {
+    list-style: none; /* tira os pontos padrão de lista */
+    float: center; 
+}
+
+/* deixa o menu horizontal com uma palavra ao lado da outra */
+.menu li {
+    position: relative;
+    float: left; 
+}
+
+/* estiliza as cores do texto que servirão de links*/
+.menu li a { 
+    color:#666666; 
+    text-decoration:none; 
+    padding:5px 18px; /* espaçamento entre palavras */
+    display:block;}
+
+/* hover é o estilo que fica quando passa o mouse por cima */
+.menu li 
+a:hover {
+color:#AA86FF; 
+}
+
+/* estilos do submenu */
+.menu li  ul{
+position:absolute; /* a posição deve ser absoluta para que os itens do submenu não ultrapassem o 
+seu menu pai e para que ele não interfira no fluxo dos elementos do menu */
+top:48px;
+float: left; 
+background-color: #000000;
+display:none; /* esconder o submenu */
+}   
+
+/* exibir submenu quando passar o mouse por cima */
+.menu li:hover ul, .menu li .over ul {display:block;}
+
+.menu li ul li{
+display:block; 
+width:100%;
+}
+
+ul li { display: inline-block; /* remover o ponto padrão da tag <li> */
+}
+
+a { text-decoration: none; /* Remove a estilização de texto padrão das tags <a> */
+}
+
+ul {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* ----- Fim do menu ------ */
+
+
+
+/* Elementos do id="titulo"*/
+
+#titulo {
+    background-image: url('../Imagens/bg-1.jpg'); /* Imagem de fundo */ 
+    background-size: cover; /* Para a imagem cobrir o fundo o quanto for possível */
+    background-color: #444444; /* Cor de fundo caso a imagem de fundo não carregue */
+    text-align: center; /* Alinhamento do texto ao centro */
+    min-height: 100vh; /* Cobrir a tela inteira na vertical*/
+}
+
+#titulo .interno{
+    margin: auto; /* alinha os elementos 'interno' ao centro */
+    padding-top: 12%; /* Espaçamento do top */
+    z-index: 1000; /* Posição relativa ao eixo Z, para ficar na frente de todos os elementos */
+}
+
+#titulo h1 {
+    font-size: 2cm; /* Tamanho da fonte do h1 em centímetros*/
+    padding: 0em 0.5em 0em 0.25em; /* Espaçamento: top right bottom(abaixo) left */
+    font-family: "Source Sans Pro", sans-serif; 
+    color: #f1f1f1; /* */
+    font-weight: 900; /* Espessura da fonte, quanto mais, mais grossa será a fonte */
+    line-height: 70px; /* Define o tamanho da linha dessa tag h1 */
+    text-transform: uppercase; /* Trasforma todas as letras do texto em maiúsculas */
+    text-shadow: 2px 2px 3px black; /* sombra do texto */
+}
+
+#titulo h3 {
+    font-size: 1cm;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #f1f1f1; /* */
+    font-weight: 400; /* Espessura da fonte, quanto mais, mais grossa será a fonte */
+    margin: 0; /* retira qualquer margem padrão da tag */
+    padding:0; /* retira qualquer padding padrão da tag */
+    text-shadow: 1px 1px 2px black; /* sombra do texto */
+}
+
+/* ----- Fim dos elementos de 'titulo'------ */
+
+#wrapper {
+    width: 40em; /* Largura de 40em */
+    margin: 0 auto; /* Margem igual a 0 para top e bottom e auto para alinhar o elemento ao centro */
+    padding-top: 0; /* Espaçamento do topo de 0 */
+    padding-right: 5em; /* Espaçamento da direita de 5em */
+    padding-bottom: 2em; /* Espaçamento inferior de 2em */
+    padding-left: 5em; /* Espaçamento da esquerda de 5em  */
+}
+
+#intro {
+    padding: 2em 4em 2em 4em; /* Espaçamento: top=4em right=4em bottom=2em left=4em */
+    background-color: #f1f1f1; /* Cor de fundo em hexadecimal */
+    border-radius: 10px; /* Borda com 10 pixel de arredondamento */
+    text-align: center; /* Texto alinhado ao centro */
+    margin-bottom: 4em; /* Margem inferior de 4em */
+    margin-top: 2em; /*margem superior de 2em */
+}
+
+.itens {
+    display: flex; /* Define o tipo de caixa de renderização usada pelo elemento. */
+    width: calc(100% + 2em); /* Calculo de largura */
+    margin: -2em 0 0 -2em; /* Margem: top=-2em right=0 bottom=0 left=-2em */
+}
+
+.item {
+    padding: 1em 1em 1em 1em; /* Espaçmento: top=3em right=3em bottom=1em left=3em */
+    background-color: #f1f1f1; /*Cor de fundo em hexadecimal*/
+    border-radius: 4px; /* Borda com 4 pixel de arredondamento */
+    text-align: left; /* Texto alihado ao centro */
+    margin: 2em 0 0 2em; /* margem: top=2em right=0 bottom=0 left=2em */
+    width:  /* largura */
+}
+
+.item .acao .botao {
+    padding-bottom: 0px;
+}
+
+.botao {
+    border-radius: 4px; /* Borda com 4 pixel de arredondamento */
+    display: block; /* Define o tipo de caixa de renderização usada pelo elemento.  */
+    font-weight: 400; /* Espessura do texto */
+    padding: 1em 1em 1em 1em; /* Espaçamento de 1em para top, right, bottom e left */
+    text-align: center; /* Texto alinhado ao centro */
+    text-transform: uppercase; /* Trasforma todas as letras do texto em maiúsculas */
+    letter-spacing: 0.325em; /* Espaçamento entre as letras do texto */
+    font-size: 0.725em; /* Tamanho da fonte */
+    background-color: transparent; /* Cor de fundo trasparente */
+    border: 2px solid #9a9a9a; /* Borda do botão espessura=2px estilo=solid e cor=#666666 */
+    color: #9a9a9a; /* Cor do texto em hexadecimal */
+
+.botao: hover {
+    color: black; /* Cor do texto em hexadecimal */
+    border: 2px solid black;/* Borda do botão espessura=2px
+    estilo=solid e cor=#EF6480 */
+}
+
+
+
+
+
+
+
+
+
